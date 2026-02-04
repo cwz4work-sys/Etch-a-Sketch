@@ -16,6 +16,8 @@ for (let index = 1; index <= 16; index++) {
         rowDiv.style.boxSizing = 'border-box';
         rowDiv.style.height = `${gridDimen}px`;
         rowDiv.style.border = 'black solid 0.5px';
+        rowDiv.addEventListener('mouseenter', () => rowDiv.style.backgroundColor = 'orange');
+        rowDiv.addEventListener('mouseleave', () => rowDiv.style.removeProperty('background-color'));
         div.appendChild(rowDiv);
     }
 }
