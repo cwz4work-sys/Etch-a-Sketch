@@ -2,5 +2,11 @@
     display: flex;
     width: 50vw;
     height: 50vw;
-    margin: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
