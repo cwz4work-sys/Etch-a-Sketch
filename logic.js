@@ -35,7 +35,7 @@ function drawGrid(newDimen) {
             rowDiv.style.boxSizing = 'border-box';
             rowDiv.style.height = `${gridDimen}px`;
             rowDiv.style.border = 'black solid 0.5px';
-            rowDiv.addEventListener('mouseenter', () => rowDiv.style.backgroundColor = 'orange');
+            rowDiv.addEventListener('mouseenter', () => rowDiv.style.backgroundColor = `rgb(${randRgb()}, ${randRgb()}, ${randRgb()})`);
             div.appendChild(rowDiv);
         }
     }
@@ -50,6 +50,10 @@ function removeGrid() {
 
 function remove(nodeList) {
     nodeList.forEach(elem => elem.remove());
+}
+
+function randRgb() {
+    return Math.floor(Math.random() * 256);
 }
 
 drawGrid(16);
